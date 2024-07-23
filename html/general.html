@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icoin</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.jpg">
+
+    <link rel="stylesheet" href="../css/general.css">
+</head>
+<body>
+
+<div class="tabs-container">
+    <div class="tab" onclick="openTab('data')">Data</div>
+    <div class="tab" onclick="openTab('dashboard')">DashBoard</div>
+    <div class="tab" onclick="openTab('calculator')">calculator</div>
+    <div class="tab" onclick="openTab('analyze')">analyze</div>
+</div>
+
+<div class="content">
+    <div id="data" class="tab-content active">
+        <iframe src="data.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+    <div id="dashboard" class="tab-content">
+        <iframe src="dashBoard.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+    <div id="calculator" class="tab-content">
+        <iframe src="calc.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+    <div id="analyze" class="tab-content">
+        <iframe src="analyze.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+</div>
+
+<script src="../js/general.js"></script>
+</body>
+</html>

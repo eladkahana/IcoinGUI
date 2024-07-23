@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Suggestions</title>
+    <link rel="stylesheet" href="../css/analyze.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <header class="header animate__animated animate__fadeInDown">
+        <h1>Stock Suggestions</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+            <button id="refreshButton" class="button animate__animated animate__fadeInUp"><i class="fas fa-sync"></i> Refresh Data</button>
+        </div>
+    </header>
+    <main>
+        <div class="stock-table animate__animated animate__fadeInLeft">
+            <table id="stockTable">
+                <thead>
+                <tr>
+                    <th>Ticker</th>
+                    <th>Gap (%)</th>
+                </tr>
+                </thead>
+                <tbody id="stockBody"></tbody>
+            </table>
+        </div>
+        <div class="charts-container animate__animated animate__fadeInRight" id="chartsContainer">
+            <div id="chart1" class="chart"></div>
+            <div id="chart2" class="chart"></div>
+        </div>
+        <div class="tip-box animate__animated animate__fadeInUp">
+            <h2>Tips from AI Agent</h2>
+            <p id="tip"></p>
+        </div>
+    </main>
+</div>
+<!-- Include TradingView library script -->
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+<script src="../js/analyze.js"></script>
+</body>
+</html>

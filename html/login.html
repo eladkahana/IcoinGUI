@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icoin</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.jpg">
+</head>
+<body>
+<div class="login-container">
+    <h2>Finance Login</h2>
+    <div class="input-container">
+        <i class="fas fa-user"></i>
+        <input type="text" id="Email" class="login-input" placeholder="Username">
+    </div>
+    <div class="input-container">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" class="login-input" placeholder="Password">
+        <i class="fas fa-eye-slash" id="togglePassword"></i>
+    </div>
+    <button onclick="login()" class="login-button">Login</button>
+    <div id="error-message" class="error-message"></div>
+    <div class="forgot-password">
+        <a href="#">Forgot your password?</a>
+    </div>
+    <div class="signup">
+        <span>Don't have an account?</span>
+        <a href="signup.html">Sign Up</a>
+    </div>
+</div>
+<script src="../js/login.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</body>
+</html>

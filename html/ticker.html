@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Website</title>
+    <link rel="stylesheet" href="../css/ticker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+
+<header>
+    <h1 id="header-title">Financial Portfolio</h1>
+    <button id="back-button"><i class="fas fa-arrow-left"></i> Back</button>
+</header>
+
+<main>
+    <div class="centered">
+        <div class="data-card small-card" id="daily-change-card">
+            <h3>Daily Change</h3>
+            <p id="daily-change-value">0.00</p>
+        </div>
+        <div class="data-card small-card" id="dividends-card">
+            <h3>Dividends</h3>
+            <p id="dividends-value">0.00$</p>
+            <i class="fas fa-chevron-down" id="dividends-arrow"></i>
+            <div id="dividend-chart-container">
+                <canvas id="dividend-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="two-halves">
+        <section id="portfolio-summary" class="left-half">
+            <h2>Portfolio Summary</h2>
+            <table id="portfolio-table">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Initial Investment</th>
+                    <th>Number of Shares</th>
+                    <th>Current worth</th>
+                    <th>Daily Profit</th>
+                    <th>General Change</th>
+                    <th>General Gain</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section id="chart" class="right-half">
+            <div class="tradingview-widget-container">
+                <div id="basic-area-chart-demo"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            </div>
+        </section>
+    </div>
+
+<!--
+    <div class="centered">
+        <div class="data-card" id="dividend-chart-card">
+            <h3>Quarterly Dividends</h3>
+            <canvas id="dividend-chart"></canvas>
+        </div>
+    </div>
+-->
+
+
+</main>
+
+<script src="../js/ticker.js"></script>
+</body>
+</html>

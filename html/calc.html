@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Computing</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="../css/calc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Financial Computing</h1>
+
+    <div class="calculator">
+        <h2>Dollar Cost Averaging (DCA) Prediction</h2>
+        <div class="input-group">
+            <label for="initialAmount"><i class="fas fa-money-bill-wave"></i> Initial Amount:</label>
+            <input type="number" id="initialAmount" min="0" step="any">
+        </div>
+        <div class="input-group">
+            <label for="percentageChange"><i class="fas fa-percentage"></i> Percentage Change (per time period):</label>
+            <input type="number" id="percentageChange" min="-100" max="100" step="any">
+        </div>
+        <div class="input-group">
+            <label for="numPeriods"><i class="fas fa-clock"></i> Number of Time Periods:</label>
+            <input type="number" id="numPeriods" min="1">
+        </div>
+        <div class="input-group">
+            <label for="additionalInvestment"><i class="fas fa-hand-holding-usd"></i> Additional Investment Amount (per time period):</label>
+            <input type="number" id="additionalInvestment" min="0" step="any">
+        </div>
+        <button onclick="calculateDCA()"><i class="fas fa-calculator"></i> Calculate DCA</button>
+        <div class="chart-container">
+            <div class="data-table chart" id="dcaDataTable"></div>
+            <div class="chart">
+            <canvas id="dcaChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="query">
+        <div class="calculator">
+            <h2>Query when it comes to certain sum</h2>
+            <div class="input-group">
+                <label for="queryAmount"><i class="fas fa-search-dollar"></i> Query Amount:</label>
+                <input type="number" id="queryAmount" min="0" step="any">
+            </div>
+            <button onclick="queryDCA('amount')"><i class="fas fa-calculator"></i> Calculate</button>
+            <div id="queryResultAmount" class="output"></div>
+        </div>
+
+        <div class="calculator">
+            <h2>Query when it doubles</h2>
+            <div class="input-group">
+                <label for="doubleXTimes"><i class="fas fa-times"></i> Double X Times:</label>
+                <input type="number" id="doubleXTimes" min="1">
+            </div>
+            <button onclick="queryDCA('doubles')"><i class="fas fa-calculator"></i> Calculate</button>
+            <div id="queryResultDoubles" class="output"></div>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <h2>Compound Interest</h2>
+        <div class="input-group">
+            <label for="initialAmountCI"><i class="fas fa-money-bill-wave"></i> Initial Amount:</label>
+            <input type="number" id="initialAmountCI" min="0" step="any">
+        </div>
+        <div class="input-group">
+            <label for="percentageChangeCI"><i class="fas fa-percentage"></i> Percentage Change (Step 1):</label>
+            <input type="number" id="percentageChangeCI" min="-100" max="100" step="any">
+        </div>
+        <div class="input-group">
+            <label for="percentageChangeCIStep2"><i class="fas fa-percentage"></i> Percentage Change (Step 2):</label>
+            <input type="number" id="percentageChangeCIStep2" min="-100" max="100" step="any">
+        </div>
+        <button onclick="calculateCompoundInterest()"><i class="fas fa-calculator"></i> Calculate Compound Interest</button>
+        <div id="outputCI" class="output"></div>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+<script src="../js/calc.js"></script>
+</body>
+</html>

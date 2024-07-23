@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <link rel="stylesheet" href="../css/dashBoard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <h1>Financial Dashboard</h1>
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch" class="theme-switch">
+            <label for="theme-switch" class="theme-switch-label"></label>
+        </div>
+    </header>
+
+    <section class="overview-section">
+        <h2>Overview</h2>
+        <div class="info-cards-container">
+            <div class="info-card">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Invested Amount</h3>
+                <p>$10,000</p>
+            </div>
+
+
+            <div class="info-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Months from First Investment</h3>
+                <p>3</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Average Performance per Month</h3>
+                <p>5%</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-coins"></i>
+                <h3>Total Revenue</h3>
+                <p>$500</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-trophy"></i>
+                <h3>Total Performance</h3>
+                <p>50%</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-wallet"></i>
+                <h3>Portfolio Worth</h3>
+                <p>$15,000</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="performance-section">
+        <h2>Performance</h2>
+        <div class="charts-container">
+            <div id="portfolio-over-time" class="chart-container expandable">
+                <h3>Portfolio Growth</h3>
+                <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            </div>
+            <div id="total-chart" class="chart-container expandable">
+                <h3>Total Performance</h3>
+                <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="dividends-section">
+        <h2>Dividends</h2>
+        <div class="charts-container">
+            <div id="dividends-by-stock" class="chart-container expandable">
+                <h3>Dividends by Stock</h3>
+                <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            </div>
+            <div id="dividends-chart" class="chart-container expandable">
+                <h3>Dividend History</h3>
+                <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            </div>
+        </div>
+        <div class="info-cards-container">
+            <div class="info-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Total Dividends</h3>
+                <p>$450</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <h2>Portfolio</h2>
+        <div class="charts-container">
+            <div id="portfolio-pie-chart" class="chart-container expandable">
+                <h3>Portfolio Distribution</h3>
+                <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            </div>
+            <div id="heat-map" class="chart-container expandable">
+                <h3>Stock Performance Heat Map</h3>
+                <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="fees-section">
+        <h2>Fees</h2>
+        <div class="charts-container">
+            <div id="management-fee-by-date" class="chart-container expandable">
+                <h3>Management Fee History</h3>
+                <button class="expand-btn"><i class="fas fa-expand"></i></button>
+            </div>
+        </div>
+        <div class="info-cards-container">
+            <div class="info-card">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Management Fee Amount</h3>
+                <p>$1,800</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="expanded-chart"></div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="../js/dashBoard.js"></script>
+</body>
+</html>

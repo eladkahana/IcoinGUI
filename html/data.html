@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icoin Financial Portfolio</title>
+    <link rel="stylesheet" href="../css/data.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="title-container">
+            <h1>Icoin Financial Portfolio</h1>
+        </div>
+        <div class="total-card-container">
+            <div class="total-card positive">
+                <h2>Total Daily Change</h2>
+                <div id="daily-change-values">
+                    <span id="percentage-change">+0%</span>
+                    <span id="dollar-change">$0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="portfolio-summary">
+        <table id="portfolio-table">
+            <thead>
+            <tr>
+                <th>Stock Ticker</th>
+                <th>Initial Investment</th>
+                <th>Number of Shares</th>
+                <th>Current Worth</th>
+                <th>Daily Change</th>
+                <th>Daily Profit</th>
+                <th>General Change</th>
+                <th>General Gain</th>
+                <th>Dividends</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Populate table with data from JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <div class="buttons">
+        <button class="btn" id="buy-stock"><i class="fas fa-chart-line"></i> Invest in Stocks</button>
+        <button class="btn" id="add-dividend"><i class="fas fa-hand-holding-usd"></i> Add Dividend</button>
+        <button class="btn" id="fee-management"><i class="fas fa-file-invoice-dollar"></i> Fee Management</button>
+        <button class="btn" id="split-stock"><i class="fas fa-exchange-alt"></i> Split/Unsplit Stock</button>
+    </div>
+
+    <!-- Pop-up for split ratio -->
+    <div id="split-popup" class="popup-container">
+        <div class="popup-content">
+            <h3>Split/Unsplit Stock</h3>
+            <form id="split-form">
+                <input type="text" placeholder="Ticker" id="split-ticker">
+                <input type="number" step="any" placeholder="Before Ratio" id="split-before">
+                <input type="number" step="any" placeholder="After Ratio" id="split-after">
+                <button type="submit">Split/Unsplit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Pop-up forms -->
+    <div id="stock-popup" class="popup-container">
+        <div class="popup-content">
+            <h3>Add Stock</h3>
+            <form id="stock-form">
+                <input type="text" placeholder="Ticker" id="stock-ticker">
+                <input type="number" step="any" placeholder="Amount of Shares" id="stock-amount">
+                <input type="number" step="any" placeholder="Price" id="stock-price">
+                <input type="date" id="stock-date">
+                <button type="submit">Add Stock</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="dividend-popup" class="popup-container">
+        <div class="popup-content">
+            <h3>Add Dividend</h3>
+            <form id="dividend-form">
+                <input type="text" placeholder="Ticker" id="dividend-ticker">
+                <input type="number" step="any" placeholder="Amount" id="dividend-amount">
+                <input type="date" id="dividend-date">
+                <button type="submit">Add Dividend</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="fee-popup" class="popup-container">
+        <div class="popup-content">
+            <h3>Add Management Fee</h3>
+            <form id="fee-form">
+                <input type="number" step="any" placeholder="Amount" id="fee-amount">
+                <input type="date" id="fee-date">
+                <button type="submit">Add Fee</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirmation</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="confirmation-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <section id="timeline" class="timeline-container">
+        <div class="timeline">
+            <!-- Populate timeline with data from JavaScript -->
+        </div>
+    </section>
+</main>
+
+<script src="../js/data.js"></script>
+</body>
+</html>
